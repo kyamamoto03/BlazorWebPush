@@ -7,6 +7,8 @@ public partial class WebPushControl : IAsyncDisposable
 {
     [Inject]
     public required IJSRuntime _JSRuntime { get; set; }
+    [Parameter]
+    public string WebPushPublicKey { get; set; } = string.Empty;
 
     WebPushJsInterop pushNotificationsJsInterop { get; set; }
 
@@ -18,15 +20,7 @@ public partial class WebPushControl : IAsyncDisposable
 
     public async Task<NotificationSubscription> RequestNotificationSubscriptionAsync()
     {
-        var subscription = await pushNotificationsJsInterop.RequestSubscription("BD4ldrURU9tPMSWtq-iqG4D6i2m4_IpbvNEsmJxakVgbSV-fxKBhJHouPnkPwRsDI4Yu_gg745t7OjYWLBwAEfA");
-        // subscriptionがnullじゃない場合Consoleに出力
-        if (subscription != null)
-        {
-            Console.WriteLine(subscription.Url);
-            Console.WriteLine(subscription.P256dh);
-            Console.WriteLine(subscription.Auth);
-
-        }
+        var subscription = await pushNotificationsJsInterop.RequestSubscription(WebPushPublicKey);
         return subscription;
     }
 

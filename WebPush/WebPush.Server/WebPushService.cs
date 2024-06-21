@@ -24,7 +24,7 @@ public class WebPushService : IPushNotification
 
         var pushSubscription = new PushSubscription(endPoint, p256dh, auth);
 
-        var vapidDetails = new VapidDetails("mailto:<someone@example.com>", publicKey, privateKey);
+        var vapidDetails = new VapidDetails("mailto:<someone@example.com111>", publicKey, privateKey);
         var webPushClient = new WebPushClient();
         try
         {

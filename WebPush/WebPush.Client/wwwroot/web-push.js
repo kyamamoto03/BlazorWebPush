@@ -1,12 +1,9 @@
-﻿// This is a JavaScript module that is loaded on demand. It can export any number of
-// functions, and may import other JavaScript modules if required.
-//const applicationServerPublicKey = 'BD4ldrURU9tPMSWtq-iqG4D6i2m4_IpbvNEsmJxakVgbSV-fxKBhJHouPnkPwRsDI4Yu_gg745t7OjYWLBwAEfA';
-
-
+﻿// ServiceWorkerの登録
 export function serviceWorkRegister() {
     navigator.serviceWorker.register('_content/WebPush.Client/service-worker.js');
 }
 
+// WebPush通知の購読
 export async function requestSubscription(publicKey) {
     //ログ出力
     console.log('requestSubscription');

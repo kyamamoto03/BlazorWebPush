@@ -19,6 +19,11 @@ public class WebPushController : ControllerBase
 
     }
 
+    /// <summary>
+    /// 購読追加
+    /// </summary>
+    /// <param name="subscription"></param>
+    /// <returns></returns>
     [HttpPost("Subscribe")]
     public IActionResult Subscribe([FromBody] Subscription subscription)
     {
@@ -36,6 +41,10 @@ public class WebPushController : ControllerBase
         return Ok();
     }
 
+    /// <summary>
+    /// WebPush通知送信
+    /// </summary>
+    /// <returns></returns>
     [HttpPost("Send")]
     public async Task<IActionResult> SendAsync()
     {

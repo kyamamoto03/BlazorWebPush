@@ -14,9 +14,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddWebPush(config =>
 {
-
-    config.PublicKey = "BD4ldrURU9tPMSWtq-iqG4D6i2m4_IpbvNEsmJxakVgbSV-fxKBhJHouPnkPwRsDI4Yu_gg745t7OjYWLBwAEfA";
-    config.PrivateKey = "milFOZRTb164mxVLA_IgGmFyoxzIjK8Dt5XCuhkduR8";
+    config.PublicKey = "{{PublicKey}}";
+    config.PrivateKey = "{{PrivateKey}}";
 });
 
 
