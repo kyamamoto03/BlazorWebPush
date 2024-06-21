@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorWebPush.Client\BlazorWebPush.Client.csproj" />
+    <ProjectReference Include="..\BlazorWebPush.Shared\BlazorWebPush.Shared.csproj" />
+    <ProjectReference Include="..\WebPush\WebPush.Server\WebPush.Server.csproj" />
   </ItemGroup>
 
 </Project>

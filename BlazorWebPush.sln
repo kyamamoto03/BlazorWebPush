@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebPush.Client", "Bla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebPush.Server", "BlazorWebPush.Server\BlazorWebPush.Server.csproj", "{06D851C0-7972-494E-AE71-B609FD2E49B4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebPush", "WebPush", "{2C44585D-D466-4C7F-B497-5CEA472E7AD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPush.Server", "WebPush\WebPush.Server\WebPush.Server.csproj", "{9D1B36BA-3258-461A-AD9F-3E1E02AC60FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPush.Client", "WebPush\WebPush.Client\WebPush.Client.csproj", "{713975E3-1A50-4635-9989-207F193A8E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebPush.Shared", "BlazorWebPush.Shared\BlazorWebPush.Shared.csproj", "{8CD34AFA-7D56-4586-ADE7-2C75C9D1018E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +29,25 @@ Global
 		{06D851C0-7972-494E-AE71-B609FD2E49B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06D851C0-7972-494E-AE71-B609FD2E49B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06D851C0-7972-494E-AE71-B609FD2E49B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1B36BA-3258-461A-AD9F-3E1E02AC60FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1B36BA-3258-461A-AD9F-3E1E02AC60FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1B36BA-3258-461A-AD9F-3E1E02AC60FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1B36BA-3258-461A-AD9F-3E1E02AC60FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713975E3-1A50-4635-9989-207F193A8E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713975E3-1A50-4635-9989-207F193A8E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713975E3-1A50-4635-9989-207F193A8E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713975E3-1A50-4635-9989-207F193A8E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD34AFA-7D56-4586-ADE7-2C75C9D1018E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD34AFA-7D56-4586-ADE7-2C75C9D1018E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD34AFA-7D56-4586-ADE7-2C75C9D1018E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD34AFA-7D56-4586-ADE7-2C75C9D1018E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D1B36BA-3258-461A-AD9F-3E1E02AC60FD} = {2C44585D-D466-4C7F-B497-5CEA472E7AD9}
+		{713975E3-1A50-4635-9989-207F193A8E42} = {2C44585D-D466-4C7F-B497-5CEA472E7AD9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EEE25C6-9B8F-46A0-BDDB-95F4DF6BAB6D}

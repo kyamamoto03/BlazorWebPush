@@ -1,7 +1,35 @@
 ﻿@page "/"
+@using WebPush.Client
+
+@inject IWebPushUsecase _webPushUsecase
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Welcome Web Push</h1>
 
-Welcome to your new app.
+<WebPushControl @ref="webPushControl"></WebPushControl>
+<button @onclick="RequestNotificationSubscriptionAsync">Init</button>
+
+@code {
+    private WebPushControl? webPushControl;
+
+    protected override Task OnParametersSetAsync()
+    {
+        return base.OnParametersSetAsync();
+    }
+
+    async Task RequestNotificationSubscriptionAsync()
+    {
+        var subscription = await webPushControl.RequestNotificationSubscriptionAsync();
+
+        // subscriptionがnullじゃない場合Consoleに出力
+        if (subscription != null)
+        {
+            Console.WriteLine(subscription.Url);
+            Console.WriteLine(subscription.P256dh);
+            Console.WriteLine(subscription.Auth);
+
+            await _webPushUsecase.SubscribeAsync(subscription.Url!, subscription.P256dh!, subscription.Auth!);
+        }
+    }
+}
